@@ -1,0 +1,27 @@
+<Project>
+
+  <Import Project="../../Directory.Build.props" />
+
+  <PropertyGroup>
+    <AssemblyVersion />
+    <SharedFrameworkFriendlyName>Remora.Discord</SharedFrameworkFriendlyName>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <SkipValidatePackage>true</SkipValidatePackage>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <SharedFrameworkName>Remora.Discord.App</SharedFrameworkName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="!$(MSBuildProjectName.Contains('.Ref'))">
+    <OverridePackageId>$(SharedFrameworkName).Runtime.$(RuntimeIdentifier)</OverridePackageId>
+    <PlatformPackageType>RuntimePack</PlatformPackageType>
+    <ArchiveName>remora-discord-runtime</ArchiveName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(MSBuildProjectName.Contains('.Ref'))">
+    <NoWarn>$(NoWarn);NU5118</NoWarn>
+    <PlatformPackageType>TargetingPack</PlatformPackageType>
+    <RuntimePackProjectPath>$(SharedFrameworkName).Runtime.sfxproj</RuntimePackProjectPath>
+    <ArchiveName>remora-discord-targeting-pack</ArchiveName>
+  </PropertyGroup>
+
+</Project>
