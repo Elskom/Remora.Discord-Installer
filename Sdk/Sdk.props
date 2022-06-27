@@ -1,9 +1,5 @@
 <Project>
 
-  <PropertyGroup>
-    <UsingRemoraDiscordNetSdk>true</UsingRemoraDiscordNetSdk>
-  </PropertyGroup>
-
   <ItemGroup>
     <KnownFrameworkReference Include="Remora.Discord.App"
                              TargetFramework="net6.0"

@@ -5,8 +5,9 @@
   <PropertyGroup>
     <AssemblyVersion />
     <SharedFrameworkFriendlyName>Remora.Discord</SharedFrameworkFriendlyName>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
     <SkipValidatePackage>true</SkipValidatePackage>
+    <InstallerOverrideAuthors>true</InstallerOverrideAuthors>
     <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
     <SharedFrameworkName>Remora.Discord.App</SharedFrameworkName>
   </PropertyGroup>

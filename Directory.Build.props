@@ -19,9 +19,9 @@
     <PackageOutputPath>$(MSBuildThisFileDirectory)artifacts\packages\$(Configuration)\Shipping\</PackageOutputPath>
     <Company>Jarl Gullberg</Company>
     <Authors>Jarl Gullberg</Authors>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/Elskom/Remora.Discord-Installer/</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Elskom/Remora.Discord/</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Elskom/Remora.Discord-Installer/</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <Copyright>Copyright (c) 2022</Copyright>
     <!-- <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild> -->
