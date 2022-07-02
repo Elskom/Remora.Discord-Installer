@@ -9,7 +9,7 @@
     <FrameworkReference
             Include="Microsoft.AspNetCore.App"
             IsImplicitlyDefined="true"
-            Condition="'$(DisableImplicitFrameworkReferences)' != 'true' AND !'@(FrameworkReference->AnyHaveMetadataValue('Identity', 'Microsoft.AspNetCore.App'))'" />
+            Condition="'$(DisableImplicitFrameworkReferences)' != 'true' AND !@(FrameworkReference->AnyHaveMetadataValue('Identity', 'Microsoft.AspNetCore.App'))" />
     <FrameworkReference
             Include="Remora.Discord.App"
             IsImplicitlyDefined="true"
