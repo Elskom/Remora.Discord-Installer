@@ -7,7 +7,7 @@
     <!-- Required to strong name sign Remora.Discord and it's unsigned dependencies. -->
     <PackageReference Include="StrongNamer" Version="*-*" />
     <!-- The actual Remora.Discord nuget metapackage. -->
-    <PackageReference Include="Remora.Discord" Version="2022.39.0" />
+    <PackageReference Include="Remora.Discord" Version="2022.43.0" />
     <!-- SourceLink -->
     <PackageReference Remove="Microsoft.SourceLink.AzureRepos.Git" />
     <PackageReference Include="Microsoft.DotNet.Build.Tasks.Archives" IsImplicitlyDefined="true" Version="*-*" Condition="$(RuntimeIdentifier.StartsWith('linux-')) AND $([MSBuild]::IsOSPlatform('Linux'))">
