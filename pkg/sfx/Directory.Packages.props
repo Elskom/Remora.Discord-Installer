@@ -1,10 +1,9 @@
 <Project>
 
   <ItemGroup>
+    <FrameworkReference Include="Microsoft.NETCore.App" />
     <!-- Try to prevent assemblies that exist in the ASP.NET Core Framework from being included here. -->
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
-    <!-- Work arround https://github.com/dotnet/runtime/issues/71027 by adding NETCore.App last. -->
-    <FrameworkReference Include="Microsoft.NETCore.App" />
     <!-- Required to strong name sign Remora.Discord and it's unsigned dependencies. -->
     <PackageReference Include="StrongNamer" Version="*-*" />
     <!-- The actual Remora.Discord nuget metapackage. -->
