@@ -24,10 +24,10 @@
     <Authors>Jarl Gullberg</Authors>
     <CopyrightMicrosoft>Copyright (c) 2022</CopyrightMicrosoft>
     <Copyright>$(CopyrightMicrosoft)</Copyright>
-    <Manufacturer>Jarl Gullberg</Manufacturer>
   </PropertyGroup>
 
   <ItemGroup>
+    <CandleVariables Include="Manufacturer" Value="$(Company)" />
     <PackageReference Include="Microsoft.DotNet.Build.Tasks.Installers" IsImplicitlyDefined="true" Version="7.0.0-beta.22322.3" Condition="$([MSBuild]::IsOSPlatform('Windows')) OR $([MSBuild]::IsOSPlatform('OSX'))">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
