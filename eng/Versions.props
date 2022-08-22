@@ -3,7 +3,7 @@
   <PropertyGroup>
     <!-- This repo version -->
     <MajorVersion>2022</MajorVersion>
-    <MinorVersion>46</MinorVersion>
+    <MinorVersion>47</MinorVersion>
     <PatchVersion>0</PatchVersion>
     <VersionPrefix>$(MajorVersion).$(MinorVersion).$(PatchVersion)</VersionPrefix>
     <!-- <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild> -->
