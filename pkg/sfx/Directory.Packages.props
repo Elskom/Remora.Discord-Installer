@@ -1,21 +1,23 @@
 <Project>
 
+  <Import Project="../../Directory.Packages.props" />
+
   <ItemGroup>
     <FrameworkReference Include="Microsoft.NETCore.App" />
     <!-- Try to prevent assemblies that exist in the ASP.NET Core Framework from being included here. -->
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
     <!-- Required to strong name sign Remora.Discord and it's unsigned dependencies. -->
-    <PackageReference Include="StrongNamer" Version="*-*" />
+    <PackageReference Include="StrongNamer" />
     <!-- The actual Remora.Discord nuget metapackage. -->
-    <PackageReference Include="Remora.Discord" Version="2022.47.0" />
+    <PackageReference Include="Remora.Discord" />
     <!-- Remora's plugin system. -->
-    <PackageReference Include="Remora.Plugins" Version="*-*" />
+    <PackageReference Include="Remora.Plugins" />
     <!-- SourceLink -->
     <PackageReference Remove="Microsoft.SourceLink.AzureRepos.Git" />
-    <PackageReference Include="Microsoft.DotNet.Build.Tasks.Archives" IsImplicitlyDefined="true" Version="*-*" Condition="$(RuntimeIdentifier.StartsWith('linux-')) AND $([MSBuild]::IsOSPlatform('Linux'))">
+    <PackageReference Include="Microsoft.DotNet.Build.Tasks.Archives" Condition="$(RuntimeIdentifier.StartsWith('linux-')) AND $([MSBuild]::IsOSPlatform('Linux'))">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.DotNet.Build.Tasks.Installers" IsImplicitlyDefined="true" Version="7.0.0-beta.22322.3" Condition="$([MSBuild]::IsOSPlatform('Windows')) OR $([MSBuild]::IsOSPlatform('OSX'))">
+    <PackageReference Include="Microsoft.DotNet.Build.Tasks.Installers" Condition="$([MSBuild]::IsOSPlatform('Windows')) OR $([MSBuild]::IsOSPlatform('OSX'))">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>

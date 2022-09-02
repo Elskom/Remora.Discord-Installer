@@ -9,6 +9,8 @@
     <NoPackageAnalysis>true</NoPackageAnalysis>
     <PackageTags>Remora.Discord</PackageTags>
     <Description>.NET SDK to properly use the Remora.Discord framework reference.</Description>
+    <!-- Remove warnings about using central package management with multiple nuget sources. -->
+    <NoWarn>$(NoWarn);NU1507</NoWarn>
   </PropertyGroup>
 
 </Project>
