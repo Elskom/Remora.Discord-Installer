@@ -24,14 +24,16 @@
     <Authors>Jarl Gullberg</Authors>
     <CopyrightMicrosoft>Copyright (c) 2022</CopyrightMicrosoft>
     <Copyright>$(CopyrightMicrosoft)</Copyright>
+    <!-- Remove warnings about using central package management with multiple nuget sources. -->
+    <NoWarn>$(NoWarn);NU1507</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
     <CandleVariables Include="Manufacturer" Value="$(Company)" />
-    <PackageReference Include="Microsoft.DotNet.Build.Tasks.Installers" IsImplicitlyDefined="true" Version="7.0.0-beta.22322.3" Condition="$([MSBuild]::IsOSPlatform('Windows')) OR $([MSBuild]::IsOSPlatform('OSX'))">
+    <PackageReference Include="Microsoft.DotNet.Build.Tasks.Installers" Condition="$([MSBuild]::IsOSPlatform('Windows')) OR $([MSBuild]::IsOSPlatform('OSX'))">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.DotNet.Build.Tasks.Archives" IsImplicitlyDefined="true" Version="*-*"> <!-- Condition="$([MSBuild]::IsOSPlatform('Linux'))" > -->
+    <PackageReference Include="Microsoft.DotNet.Build.Tasks.Archives"> <!-- Condition="$([MSBuild]::IsOSPlatform('Linux'))" > -->
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <BundleComponentReference Include="../sfx/Remora.Discord.App.Runtime.sfxproj">

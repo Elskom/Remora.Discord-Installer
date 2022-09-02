@@ -10,6 +10,8 @@
     <InstallerOverrideAuthors>true</InstallerOverrideAuthors>
     <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
     <SharedFrameworkName>Remora.Discord.App</SharedFrameworkName>
+    <!-- Remove warnings about using central package management with multiple nuget sources. -->
+    <NoWarn>$(NoWarn);NU1507</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Condition="!$(MSBuildProjectName.Contains('.Ref'))">
