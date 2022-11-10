@@ -1,7 +1,10 @@
 <Project>
 
-  <ItemGroup>
+  <PropertyGroup>
     <RemoraDiscordFrameworkVersion Condition="'$(RemoraDiscordFrameworkVersion)' == ''">2022.49.0</RemoraDiscordFrameworkVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
     <!-- .NET 6. -->
     <KnownFrameworkReference Include="Remora.Discord.App"
                              TargetFramework="net6.0"
