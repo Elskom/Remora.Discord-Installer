@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <PackageVersion Include="Microsoft.DotNet.Build.Tasks.Installers" Version="7.0.0-beta.22572.6" />
-    <PackageVersion Include="Microsoft.DotNet.Build.Tasks.Archives" Version="7.0.0-beta.22572.6" />
+    <PackageVersion Include="Microsoft.DotNet.Build.Tasks.Archives" Version="7.0.0-beta.22580.5" />
     <PackageVersion Include="StrongNamer" Version="0.2.5" />
     <PackageVersion Include="Remora.Discord" Version="2022.49.0" />
     <PackageVersion Include="Remora.Plugins" Version="3.0.6" />
